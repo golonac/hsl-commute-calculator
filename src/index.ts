@@ -25,7 +25,7 @@ class TravelDurationMap {
   public heatmapTileSize: number = .6;
 
   // The number of data points that will be queried in each of the 2 dimensions, total points = (value * 2 + 1) ^ 2
-  public halfHeatmapDataPointsPerDimension = 50;
+  public halfHeatmapDataPointsPerDimension = 40;
 
   // The longest travel duration that can be displayed (values are clipped beyond it)
   public maxTravelDurationInMinutes = 90;
