@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="fi">
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width,initial-scale=1.0" />
+    <link rel="apple-touch-icon" sizes="180x180" href="/favicon/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon/favicon-16x16.png">
+    <link rel="manifest" href="/favicon/site.webmanifest">
+    <title>Työmatkan kesto</title>
+  </head>
+  <body style="display: none">
+    <div id="map"></div>
+    <div id="dialogs"></div>
+    <h1>Työmatkan kesto</h1>
+    <div id="infoContainer">
+      <div id="info">
+        <p>Mihin pitäisi muuttaa työmatka-ajan minimoimiseksi?</p>
+        <p>Valitse työpaikan sijainti klikkaamalla kartalta ja kartalle lasketaan värikoodattuna julkisen liikenteen matka-ajat <a href="https://www.hsl.fi/hsl/avoin-data">HSL:n rajapintaa</a> käyttäen.</p>
+        <p>Matkat lasketaan tälle päivälle haluttuna ajankohtana.</p>
+        <div class="headerLabel">Matka-aikojen värikoodit</label>
+        <div id="durationLegend">
+          <span id="durationLegendMin" class="minLabel"></span>
+          <span id="durationLegendMax" class="maxLabel"></span>
+        </div>
+
+        <label for="numDataPointsInput" class="headerLabel">Haun tarkkuus</label>
+        <div class="inputContainer">
+          <input type="range" min="10" max="60" value="30" id="numDataPointsInput" />
+          <label for="numDataPointsInput" class="minLabel">Nopea</label>
+          <label for="numDataPointsInput" class="maxLabel">Tarkka</label>
+        </div>
+
+        <label for="timeInput" class="headerLabel">Työmatkan ajankohta</label>
+        <div class="inputContainer">
+          <input type="time" min="10" id="timeInput" />
+        </div>
+
+
+      </div>
+    <script src="bundle.js"></script>
+  </body>
+</html>
